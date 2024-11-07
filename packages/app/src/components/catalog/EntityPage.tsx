@@ -58,6 +58,7 @@ import {
   EntityKubernetesContent,
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
+import { EntityMergeqContent } from '@internal/backstage-plugin-mergeq';
 
 const techdocsContent = (
   <EntityTechdocsContent>
@@ -238,7 +239,11 @@ const defaultEntityPage = (
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
     </EntityLayout.Route>
-
+    
+    <EntityLayout.Route path="/mergeq" title="Merge Queues">
+      <EntityMergeqContent />
+    </EntityLayout.Route>
+    
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
     </EntityLayout.Route>

@@ -1,0 +1,1 @@
+export { MergeQComponent } from './MergeQComponent';
