@@ -48,7 +48,7 @@ proxy:
     '/mergeq':
       target: 'https://gitlab.cee.redhat.com/service/app-interface-output/-/raw/master/'
       credentials: dangerously-allow-unauthenticated
-      secure: true
+      secure: false
       changeOrigin: true
 
   ### Example for how to add a proxy endpoint for the frontend.
@@ -86,7 +86,7 @@ catalog:
     - allow: [Component, System, User, Group, Resource, Location, Template, API]
   locations:
     - type: file
-      target: ../../../catalog/all.yaml
+      target: ../../catalog/all.yaml
 
 kubernetes:
   # see https://backstage.io/docs/features/kubernetes/configuration for kubernetes configuration options

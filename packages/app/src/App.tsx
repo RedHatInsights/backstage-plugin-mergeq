@@ -37,6 +37,8 @@ import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 
+import { EntityMergeqContent } from '@internal/backstage-plugin-mergeq';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -80,6 +82,7 @@ const routes = (
         <ReportIssue />
       </TechDocsAddons>
     </Route>
+    <Route path="/merge-queue" element={<EntityMergeqContent />} />
     <Route path="/create" element={<ScaffolderPage />} />
     <Route path="/api-docs" element={<ApiExplorerPage />} />
     <Route
